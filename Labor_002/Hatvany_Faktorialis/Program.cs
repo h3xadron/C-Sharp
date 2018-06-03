@@ -15,8 +15,13 @@ namespace Hatvany_Faktorialis
             int szam = int.Parse(Console.ReadLine());
             int hatvany_szam = int.Parse(Console.ReadLine());
             Console.WriteLine(Math.Pow(szam, hatvany_szam));
-            Console.WriteLine("Faktoriális: " )
-
+            int result = szam;
+            for (int i = 1; i < szam; i++)
+            {
+                result = result * i;
+            }
+            Console.WriteLine("Faktoriális: " + result);
+            Console.ReadLine();
 
 
         }

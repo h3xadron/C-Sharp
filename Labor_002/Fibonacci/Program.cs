@@ -10,15 +10,18 @@ namespace Fibonacci
     {
         static void Main(string[] args)
         {
-            Console.Write("add meg a Fibonacci sorozat hanyadik elemét szeretnéd ?");
-            int szam = int.Parse(Console.ReadLine());
-            int elozo = 1;
-            int eredmeny;
-            int alapertek = 0;
-            for (int i = 0; i <= szam; i++)
+            Console.WriteLine("Kérlek add meg hagyadik elemét számoljam ki a Fibonacci sornak?");
+            int input = int.Parse(Console.ReadLine());
+            int a = 0;
+            int b = 1;
+            for (int i = 1; i < input; i++)
             {
-                
+                int divitsion = a;
+                a = b;
+                b = divitsion + b;
             }
+            Console.WriteLine("Az eredmény: " + a);
+            Console.ReadLine();
         }
     }
 }

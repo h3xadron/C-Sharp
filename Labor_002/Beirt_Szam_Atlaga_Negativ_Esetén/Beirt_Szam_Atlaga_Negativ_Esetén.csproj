@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9DDFE402-387D-4DB9-9BEF-FF3CDC4E3913}</ProjectGuid>
+    <ProjectGuid>{0F2A54A5-1D71-44E9-933F-C2AE1847E996}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Pisti_Beadando</RootNamespace>
-    <AssemblyName>Pisti_Beadando</AssemblyName>
+    <RootNamespace>Beirt_Szam_Atlaga_Negativ_Esetén</RootNamespace>
+    <AssemblyName>Beirt_Szam_Atlaga_Negativ_Esetén</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

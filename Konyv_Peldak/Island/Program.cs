@@ -8,7 +8,7 @@ namespace Island
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
             int szigetek_szama = 0;
             int szigethossz = 0;

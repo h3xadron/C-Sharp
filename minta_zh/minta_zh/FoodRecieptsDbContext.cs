@@ -34,6 +34,7 @@ namespace minta_zh
                  .OnDelete(DeleteBehavior.NoAction)
                  );
 
+
             var carb = new Receipt() { Id = 1, Name = "Carbonara", Price = 1400 };
             var bolo = new Receipt() { Id = 2, Name = "Bolognai", Price = 900 };
             var gt = new Receipt() { Id = 3, Name = "Grízes tészta", Price = 400, IsSeductive = true };

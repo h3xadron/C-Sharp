@@ -1,14 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq; ;
 
 namespace minta_zh
 {
-    class AttributeHelper
+    public class AttributeHelper
     {
-        public static string GetPropertyDisplayName<T>(string propertyName) { return propertyName; }
-      
+        //Ez itt reflexió 
+        public static string GetPropertyDisplayName<T>(string propertyName)
+        {
+            // Ezzel kérdezem le a típusát a displaynamenek
+            var type = typeof(T);
+            var propInfo = type.GetProperties().FirstOrDefault(x => x.Name == propertyName);
+            if (propInfo != null)
+            {
+                DisplayNameAttribute displayInfo = (DisplayNameAttribute)System.Attribute.GetCustomAttribute(propInfo, typeof(DisplayNameAttribute));
+                return displayInfo?.DisplayName;
+            }
+
+            return "";
+        }
+
     }
 }

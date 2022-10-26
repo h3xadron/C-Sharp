@@ -31,6 +31,7 @@ namespace minta_zh
             Price = price;
             IsSeductive = isSeductive;
         }
+        // Ez ellenőrzéshez hasznos DE kilehet hagyni.
         public override string ToString()
         {
             return $"ID: {Id}; Name: {Name}";

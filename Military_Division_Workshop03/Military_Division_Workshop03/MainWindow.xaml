@@ -1,0 +1,55 @@
+﻿<Window x:Class="Military_Division_Workshop03.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Military_Division_Workshop03"
+        mc:Ignorable="d"
+        Title="Army Editor" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="246*"/>
+            <ColumnDefinition Width="227*"/>
+            <ColumnDefinition Width="327*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0" x:Name="lbox01" HorizontalContentAlignment="Stretch"  >
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="2" >
+                        <StackPanel >
+                            <Label Content="{Binding Type}"></Label>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <ProgressBar Minimum="0" Maximum="100" Value="{Binding Power}" Grid.Column="0"  Margin="40" Height="50" Width="100"></ProgressBar>
+                                <ProgressBar Minimum="0" Maximum="100" Value="{Binding Staminate}" Grid.Column="1" Margin="40" Height="50" Width="100"></ProgressBar>
+                                <ProgressBar Minimum="0" Maximum="100" Value="{Binding Soldier_Value}" Grid.Column="2" Margin="40" Height="50" Width="100"></ProgressBar>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+        </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Grid.Column="1" DataContext="{Binding ElementName=lbox01, Path=SelectedItem}">
+            <Label Content="{Binding Price}" ContentStringFormat="Price: {0}$"/>
+            <Button Content="Add new Army"  Padding="10" Margin="10"/>
+            <Button Content="Remove Army" Padding="10" Margin="10"/>
+            <Button Content="Edit soldier"  Padding="10" Margin="10"/>
+        </StackPanel>
+        <ListBox Grid.Column="2" x:Name="lbox02" >
+            <WrapPanel>
+                <Label Content="{Binding Type}"/>
+                <Label Content="{Binding Power}"/>
+                <Label Content="{Binding Staminate}"/>
+                <Label Content="{Binding Price}"/>
+            </WrapPanel>
+
+
+
+        </ListBox>
+    </Grid>
+    
+</Window>

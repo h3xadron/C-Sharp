@@ -36,20 +36,16 @@
         <StackPanel Grid.Column="1" DataContext="{Binding ElementName=lbox01, Path=SelectedItem}">
             <Label Content="{Binding Price}" ContentStringFormat="Price: {0}$"/>
             <Button Content="Add new Army"  Padding="10" Margin="10" Click="Button_Click_Add"/>
-            <Button Content="Remove Army" Padding="10" Margin="10"Click="Button_Click_Remove"/>
+            <Button Content="Remove Army" Padding="10" Margin="10" Click="Button_Click_Remove"/>
             <Button Content="Edit soldier"  Padding="10" Margin="10"/>
         </StackPanel>
-        <ListBox Grid.Column="2" x:Name="lbox02" >
+        <ListBox Grid.Column="2" x:Name="lbox02">
             <WrapPanel>
                 <Label Content="{Binding Type}"/>
                 <Label Content="{Binding Power}"/>
                 <Label Content="{Binding Staminate}"/>
-                <Label Content="{Binding Price}"/>
+                <Label Content="{Binding Soldier_Value}"/>
             </WrapPanel>
-
-
-
         </ListBox>
     </Grid>
-    
 </Window>

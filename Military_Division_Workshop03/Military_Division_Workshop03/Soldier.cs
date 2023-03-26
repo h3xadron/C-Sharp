@@ -36,6 +36,7 @@ namespace Military_Division_Workshop03
             set { soldier_value = value; }
         }
 
+        
         public event PropertyChangedEventHandler? PropertyChanged;
         private void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {

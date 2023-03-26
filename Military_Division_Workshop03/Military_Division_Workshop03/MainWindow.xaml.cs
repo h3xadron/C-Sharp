@@ -22,6 +22,7 @@ namespace Military_Division_Workshop03
     public partial class MainWindow : Window
     {
         ObservableCollection<Soldier> soldiers;
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -39,11 +40,12 @@ namespace Military_Division_Workshop03
 
         private void Button_Click_Add(object sender, RoutedEventArgs e)
         {
-            /* Itt kéne egy Lista amibe bele pakolászom a katonákat .
-             * és akkor valahogy kiszedni  power stamina és value értékeket és össze szorozni az lesz majd a  lista ára
-            */
-            var a = new List<Soldier>();
-            a.Add(new Soldier())
+            List<Soldier> list = new List<Soldier>();
+            foreach (var item in soldiers)
+            {
+                lbox02.Items.Add(item);
+            }
+
         }
 
         private void Button_Click_Remove(object sender, RoutedEventArgs e)

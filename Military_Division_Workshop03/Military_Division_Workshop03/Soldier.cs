@@ -35,21 +35,6 @@ namespace Military_Division_Workshop03
             get { return soldier_value; }
             set { soldier_value = value; }
         }
-/*
-        private int army_price;
-
-        public int Army_Price
-        {
-            get { return army_price; }
-            set { army_price = value; }
-        }
-*/
-
-
-
-
-
-
 
         public event PropertyChangedEventHandler? PropertyChanged;
         private void OnPropertyChanged([CallerMemberName] string propertyName = "")

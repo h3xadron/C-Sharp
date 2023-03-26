@@ -34,5 +34,21 @@ namespace Military_Division_Workshop03
             };
             lbox01.ItemsSource = soldiers;
         }
+
+    
+
+        private void Button_Click_Add(object sender, RoutedEventArgs e)
+        {
+            /* Itt kéne egy Lista amibe bele pakolászom a katonákat .
+             * és akkor valahogy kiszedni  power stamina és value értékeket és össze szorozni az lesz majd a  lista ára
+            */
+            var a = new List<Soldier>();
+            a.Add(new Soldier())
+        }
+
+        private void Button_Click_Remove(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

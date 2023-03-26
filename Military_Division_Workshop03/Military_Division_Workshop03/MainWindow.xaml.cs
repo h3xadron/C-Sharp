@@ -40,12 +40,16 @@ namespace Military_Division_Workshop03
 
         private void Button_Click_Add(object sender, RoutedEventArgs e)
         {
+            soldiers.Add(new Soldier());
+
+
+            /*
             List<Soldier> list = new List<Soldier>();
             foreach (var item in soldiers)
             {
                 lbox02.Items.Add(item);
             }
-
+            */
         }
 
         private void Button_Click_Remove(object sender, RoutedEventArgs e)

@@ -39,7 +39,7 @@
             <Button Content="Remove Army" Padding="10" Margin="10" Click="Button_Click_Remove"/>
             <Button Content="Edit soldier"  Padding="10" Margin="10"/>
         </StackPanel>
-        <ListBox Grid.Column="2" x:Name="lbox02" >
+        <ListBox Grid.Column="2" x:Name="lbox02" DataContext="{Binding ElementName=lbox02, Path=SelectedItem}">
             <WrapPanel>
                 <Label Content="{Binding Type}"/>
                 <Label Content="{Binding Power}"/>

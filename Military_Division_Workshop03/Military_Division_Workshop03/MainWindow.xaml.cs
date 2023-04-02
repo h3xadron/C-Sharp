@@ -22,11 +22,12 @@ namespace Military_Division_Workshop03
     public partial class MainWindow : Window
     {
         ObservableCollection<Soldier> soldiers;
+        ObservableCollection<Soldier> army;
         
         public MainWindow()
         {
             InitializeComponent();
-
+            
             soldiers = new ObservableCollection<Soldier>()
             {
                 new Soldier() {Type = "Sniper", Power = 20, Staminate=40, Soldier_Value=10},
@@ -34,13 +35,20 @@ namespace Military_Division_Workshop03
                 new Soldier() {Type = "SEAL", Power = 70, Staminate=60, Soldier_Value=40}
             };
             lbox01.ItemsSource = soldiers;
+           
+            army = new ObservableCollection<Soldier>();
+
         }
 
-    
+
 
         private void Button_Click_Add(object sender, RoutedEventArgs e)
         {
-            soldiers.Add(new Soldier());
+            army.Add(soldiers[0]);
+            lbox02.ItemsSource = army;
+            
+           // List<Soldier> valami =+ soldiers.ToList();
+            //soldiers.Add(new Soldier());
 
 
             /*

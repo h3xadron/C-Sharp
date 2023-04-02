@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConsoleMenu-simple" Version="2.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\INNZ0S_HFT_2022231.Models\INNZ0S_HFT_2022231.Models.csproj" />
+    <ProjectReference Include="..\INNZ0S_HFT_2022231.Repository\INNZ0S_HFT_2022231.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

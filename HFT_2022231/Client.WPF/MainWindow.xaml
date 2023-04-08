@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="193*"/>
+            <ColumnDefinition Width="607*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0" x:Name="lbox01" HorizontalContentAlignment="Stretch" >
+            <StackPanel >
+                <Button x:Name="Button" Content="Add new user" Padding="10"  Margin="10"/>
+                <Button x:Name="Button01" Content="Delete" Padding="10" Margin="10"/>
+                <Button x:Name="Button02" Content="All User" Padding="10" Margin="10"/>
+                <Button x:Name="Button03" Content="Querry User" Padding="10" Margin="10"/>
+            </StackPanel>
+        </ListBox>
+        <WrapPanel  Grid.Column="1" HorizontalAlignment="Stretch">
+            <StackPanel Grid.Column="1"  >
+                <Label  Content="USer"/>
+                <Label  Content="money"/>
+                <Label  Content="valami"/>
+                <Label  Content="Másik valami"/>
+                <Label  Content="Harmadik valami"/>
+            </StackPanel>
+        </WrapPanel>
     </Grid>
 </Window>
